@@ -84,7 +84,7 @@ async def start_(client: Client, message: Message):
                         "‹ كروب الدعم › ", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "‹ قناة السورس ›", url=f"https://t.me/EITHON1"
+                        "‹ قناة السورس ›", url=f"https://t.me/zzzz7lz"
                     ),
                 ],
                 [
@@ -101,16 +101,16 @@ async def start_(client: Client, message: Message):
 @Client.on_message(command(["مبرمج السورس", f"ؤمن", f"ورس", f"السورس", f"مطور", f"المطور"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/8efbe93b81985bb648d95.jpg",
-        caption=f"""Programmer [EITHON](https://t.me/EITHON1) 𖡼\nᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ 𖡼\nғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ 𖡼""",
+        photo=f"https://telegra.ph/file/026f088918b13d74dcee9.jpg",
+        caption=f"""Programmer [ِ<ٰ𝟯 :ُ ِ𝗠َِ𝗔ِ .](https://t.me/ZZZZ7LZ) 𖡼\nᴛᴏ ᴄᴏᴍᴍụɴɪᴄᴀᴛᴇ ᴛᴏɢᴇᴛʜᴇʀ 𖡼\nғᴏʟʟᴏᴡ ᴛʜᴇ ʙụᴛᴛᴏɴѕ ʟᴏᴡᴇʀ 𖡼""",
         reply_markup=InlineKeyboardMarkup(
          [
             [
-                InlineKeyboardButton("℡ ᯓ Ξ𝗜𝗧𝗛𝗢𝗡™ ايثون", url=f"https://t.me/EITHON1"),
+                InlineKeyboardButton("ِ<ٰ𝟯 :ُ ِ𝗠َِ𝗔ِ .", url=f"https://t.me/ZZZZ7LZ"),
             ],
             [
                 InlineKeyboardButton(
-                    "-محمد .", url=f"https://t.me/M_Z_Z_W"
+                    "اوليفر", url=f"https://t.me/IIIT2"
                 ),
             ],
             [
@@ -128,7 +128,7 @@ async def help(client: Client, message: Message):
         reply_markup=InlineKeyboardMarkup(
          [
             [
-                InlineKeyboardButton("𓌹℡ ᯓ Ξ𝗜𝗧𝗛𝗢𝗡™ ايثون", url=f"https://t.me/EITHON1"),
+                InlineKeyboardButton("ِ<ٰ𝟯 :ُ ِ𝗠َِ𝗔ِ .", url=f"https://t.me/ZZZZ7LZ"),
             ],
             [
                 InlineKeyboardButton(
@@ -142,7 +142,7 @@ async def help(client: Client, message: Message):
      )
   )
 
-@Client.on_message(command(["جلب التوكن", f"لب_التوكن", "hadow"]) & filters.private & ~filters.edited)
+@Client.on_message(command(["نطيني توكن", f"جيب التوكن", "hadow"]) & filters.private & ~filters.edited)
 @sudo_users_only
 async def shadow(c: Client, message: Message):
     start = time()
