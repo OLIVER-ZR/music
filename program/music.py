@@ -70,23 +70,23 @@ async def play(c: Client, m: Message):
             return
         if not a.can_manage_voice_chats:
             await m.reply_text(
-                "أّلَصٌلَأّحٌيِّهِ مَفِّقِوِدِهِد:" + "\n\n» ❌ __إدارة دردشة الفيديو__"
+                "نطيني هالصلاحيه" + "\n\n» ❌ __إدارة دردشة الفيديو__"
             )
             return
         if not a.can_delete_messages:
             await m.reply_text(
-                "أّلَصٌلَأّحٌيِّهِ مَفِّقِوِدِهِ:" + "\n\n» ❌ __حذف الرسائل__"
+                "نطيني هالصلاحيه" + "\n\n» ❌ __حذف الرسائل__"
             )
             return
         if not a.can_invite_users:
-            await m.reply_text("أّلَصٌلَأّحٌيِّهِ مَفِّقِوِدِهِ:" + "\n\n» ❌__إضافة مستخدمين__")
+            await m.reply_text("نطيني هالصلاحيه" + "\n\n» ❌__إضافة مستخدمين__")
             return
         try:
             ubot = (await user.get_me()).id
             b = await c.get_chat_member(chat_id, ubot)
             if b.status == "kicked":
                 await m.reply_text(
-                    f"@{ASSISTANT_NAME} **ﻣ̝حّـظَّوٌر فّـې ﺂ̣̐ﻟ̣̣ﻣ̝جّـﻣ̝وٌﻋ̝̚ة** {m.chat.title}\n\n» **قِمَ بِفِّګ حٌظّڒٍ أّلَمَ ستّخَدِمَ أوِلَأًّ إوِ تّأّګدِ مَنِ تّقِيِّدِ حٌ سأّبِ أّلَمَ سأّعٌد.**"
+                    f"@{ASSISTANT_NAME} **محضور بالمجموعه** {m.chat.title}\n\n» **اتأكد من حساب المساعد يمكن محضور .**"
                 )
                 return
         except UserNotParticipant:
@@ -155,14 +155,14 @@ async def play(c: Client, m: Message):
                         )
                     except Exception as e:
                         await suhu.delete()
-                        await m.reply_text(f"🚫 حٌدِثّ خَطّأ تّأګدِ مَنِ أّلَمَګأّلَمَهِ مَفِّتّوِحٌهِ  أّوِلَآ:\n\n» {e}")
+                        await m.reply_text(f"🚫 اتأكد من الاتصال مفتوح لولا:\n\n» {e}")
             else:
                 if len(m.command) < 2:
                     await m.reply(
                         "»قِمَ بِأّلَڒٍدِ عٌ  مَلَفِّ صٌوِتّيِّ  أوِ  أګتّبِ شٍيِّئًأّ لَلَبِحٌثّ**"
                     )
                 else:
-                    suhu = await c.send_message(chat_id, "🔍**جِأّڒٍيِّ أّلَبِحٌثّ...**")
+                    suhu = await c.send_message(chat_id, "**❤️‍🔥جَاެࢪي اެݪبَحثَ...**")
                     query = m.text.split(None, 1)[1]
                     search = ytsearch(query)
                     if search == 0:
@@ -216,7 +216,7 @@ async def play(c: Client, m: Message):
                     "» أّلَڒٍدِ عٌلَىّ ** مَلَفِّ صٌوِتّيِّ  ** أو ** أعٌطّ شٍيِّئًأّ لَلَبِحٌثّ.**"
                 )
             else:
-                suhu = await c.send_message(chat_id, "🔍**يِّبِحٌثّ...**")
+                suhu = await c.send_message(chat_id, "**❤️‍🔥جَاެࢪي اެݪبَحثَ...**")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
@@ -244,7 +244,7 @@ async def play(c: Client, m: Message):
                             )
                         else:
                             try:
-                                await suhu.edit("🔄 **ﻟ̣̣ﺂ̣̐نّضّـﻣ̝ﺂ̣̐ﻣ̝ إﻟ̣̣ى ﺂ̣̐ﻟ̣̣ﻣ̝ﮗﺂ̣̐ﻟ̣̣ﻣ̝ﮪ...**")
+                                await suhu.edit("🔄 **راح اصعد اشغلهه **")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioPiped(
@@ -262,4 +262,4 @@ async def play(c: Client, m: Message):
                                 )
                             except Exception as ep:
                                 await suhu.delete()
-                                await m.reply_text(f"🚫حّـدّثّـ خـّطِّأ تٌئﮗدّ ﻣ̝نّ ﺂ̣̐ﻟ̣̣ﻣ̝ﮗﺂ̣̐ﻟ̣̣ﻣ̝ﮪ ﻣ̝فّـتٌوٌحّـﮪ  ﺂ̣̐وٌﻟ̣̣آ`{ep}`")
+                                await m.reply_text(f"🚫خطأ شوف المكالمه مفتوحه لولا `{ep}`")
