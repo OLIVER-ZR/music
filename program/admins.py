@@ -35,7 +35,7 @@ async def update_admin(client, message):
     )
 
 
-@Client.on_message(command(["skip", f"تخطي", "خطي"]) & other_filters)
+@Client.on_message(command(["skip", f"تخطي", "تخط"]) & other_filters)
 @authorized_users_only
 async def skip(c: Client, m: Message):
     user_id = m.from_user.id
@@ -82,7 +82,7 @@ async def skip(c: Client, m: Message):
 
 
 @Client.on_message(
-    command(["stop", f"stop@{BOT_USERNAME}", "end", f"نهاء", "انهاء"])
+    command(["stop", f"stop@{BOT_USERNAME}", "end", f"أنهاء", "كافي"])
     & other_filters
 )
 @authorized_users_only
@@ -219,7 +219,7 @@ async def cbstop(_, query: CallbackQuery):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await query.edit_message_text("✅ **تم ايقاف التشغيل**", reply_markup=close_mark)
+            await query.edit_message_text("✅ **تم وكفتهه حب.**", reply_markup=close_mark)
         except Exception as e:
             await query.edit_message_text(f"🚫 **خطأ :**\n\n`{e}`", reply_markup=close_mark)
     else:
